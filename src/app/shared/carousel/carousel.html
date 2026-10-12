@@ -1,0 +1,42 @@
+<div class="carousel">
+  <div class="carousel__viewport">
+    @if (current().type === 'video') {
+      <video
+        class="carousel__media"
+        [src]="current().src"
+        [attr.aria-label]="currentAlt()"
+        controls
+        playsinline
+      ></video>
+    } @else {
+      <img class="carousel__media" [src]="current().src" [alt]="currentAlt()" />
+    }
+  </div>
+
+  @if (items().length > 1) {
+    <button
+      type="button"
+      class="carousel__nav carousel__nav--prev"
+      (click)="prev()"
+      aria-label="Anterior"
+    >‹</button>
+    <button
+      type="button"
+      class="carousel__nav carousel__nav--next"
+      (click)="next()"
+      aria-label="Siguiente"
+    >›</button>
+
+    <div class="carousel__dots">
+      @for (item of items(); track $index) {
+        <button
+          type="button"
+          class="carousel__dot"
+          [class.carousel__dot--active]="$index === index()"
+          (click)="goTo($index)"
+          [attr.aria-label]="'Ir a la posición ' + ($index + 1)"
+        ></button>
+      }
+    </div>
+  }
+</div>

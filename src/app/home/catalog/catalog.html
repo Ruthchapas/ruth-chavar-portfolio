@@ -1,0 +1,75 @@
+<div class="catalog">
+  <div class="catalog__heading container">
+    <h2>{{ t().catalog.heading }}</h2>
+  </div>
+
+  <ul class="catalog__grid">
+    @for (project of projects(); track project.code) {
+      <li class="catalog__card">
+        @if (isInternal(project.url)) {
+          <a
+            class="catalog__link"
+            [routerLink]="project.url"
+            [attr.aria-label]="t().catalog.viewProjectAria + ' ' + project.title"
+          >
+            <ng-container
+              [ngTemplateOutlet]="cardBody"
+              [ngTemplateOutletContext]="{ $implicit: project, cta: t().catalog.cta }"
+            />
+          </a>
+        } @else if (project.url) {
+          <a
+            class="catalog__link"
+            [href]="project.url"
+            target="_blank"
+            rel="noopener noreferrer"
+            [attr.aria-label]="t().catalog.viewProjectAria + ' ' + project.title"
+          >
+            <ng-container
+              [ngTemplateOutlet]="cardBody"
+              [ngTemplateOutletContext]="{ $implicit: project, cta: t().catalog.cta }"
+            />
+          </a>
+        } @else {
+          <div class="catalog__link catalog__link--static" tabindex="0">
+            <ng-container
+              [ngTemplateOutlet]="cardBody"
+              [ngTemplateOutletContext]="{ $implicit: project, cta: t().catalog.privateLabel, muted: true }"
+            />
+          </div>
+        }
+      </li>
+    }
+  </ul>
+</div>
+
+<ng-template #cardBody let-project let-cta="cta" let-muted="muted">
+  <div
+    class="catalog__image"
+    [style.background-image]="'url(' + project.image + ')'"
+  >
+    @if (project.featured) {
+      <span class="wine-dot catalog__dot" aria-hidden="true"></span>
+    }
+  </div>
+
+  <div class="catalog__caption">
+    @if (project.year) {
+      <span class="catalog__year">{{ project.year }}</span>
+    }
+    <h3>{{ project.title }}</h3>
+    @if (project.stack.length) {
+      <span class="catalog__tech">{{ project.stack.join(' · ') }}</span>
+    }
+  </div>
+
+  <div class="catalog__overlay">
+    <span class="catalog__code">{{ project.code }}@if (project.year) { — {{ project.year }} }</span>
+    <h3>{{ project.title }}</h3>
+    <p class="catalog__description">{{ project.description }}</p>
+    @if (project.stack.length) {
+      <span class="catalog__stack">{{ project.stack.join(', ') }}</span>
+    }
+    <span class="catalog__cta" [class.catalog__cta--muted]="muted">{{ cta }}</span>
+  </div>
+</ng-template>

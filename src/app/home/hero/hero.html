@@ -1,0 +1,34 @@
+<div class="hero__video-frame">
+  <video
+    #heroVideo
+    class="hero__video"
+    autoplay
+    muted
+    loop
+    playsinline
+    preload="auto"
+  >
+    <source src="video/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero__video-overlay"></div>
+</div>
+
+<div class="hero container">
+  <h1 class="hero__title">
+    @for (word of t().hero.titleWords; track $index; let last = $last) {
+      <span
+        class="word"
+        [class.hero__title-accent]="last"
+        [style.animation-delay.ms]="50 + $index * 110"
+        >{{ word }}@if (!last) {&nbsp;}</span
+      >
+    }
+  </h1>
+  <div class="hero__aside">
+    <p class="hero__subtitle">{{ t().hero.subtitle }}</p>
+    <div class="hero__links">
+      <a class="underline-draw" href="#proyectos">{{ t().hero.linkProjects }}</a>
+      <a class="underline-draw" href="#sobre-mi">{{ t().hero.linkContact }}</a>
+    </div>
+  </div>
+</div>

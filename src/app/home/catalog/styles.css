@@ -1,0 +1,209 @@
+:host {
+  display: block;
+  background: var(--bg-dark);
+  color: var(--ink-light);
+  padding-top: clamp(3.5rem, 8vw, 6rem);
+  padding-bottom: clamp(3.5rem, 8vw, 6rem);
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:host(.is-visible) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.catalog__heading h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+  margin-bottom: 2rem;
+}
+
+/* A sangre completa: rompe el margen del contenedor a propósito. */
+.catalog__grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.catalog__card {
+  border-bottom: 1px solid rgba(242, 233, 216, 0.18);
+}
+
+.catalog__card:nth-child(odd) {
+  border-right: 1px solid rgba(242, 233, 216, 0.18);
+}
+
+.catalog__card:nth-last-child(-n + 2) {
+  border-bottom: none;
+}
+
+.catalog__link {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--ink-light);
+  background: #1a1410;
+}
+
+/* Proyecto sin url pública (interno/privado): misma ficha, sin enlace. */
+.catalog__link--static {
+  cursor: default;
+}
+
+.catalog__image {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1410;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Vela oscura permanente sobre la foto, para que el título/año siempre
+   tengan buen contraste encima de cualquier imagen. */
+.catalog__image::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(7, 3, 6, 0.45);
+}
+
+.catalog__link:hover .catalog__image,
+.catalog__link:focus-visible .catalog__image {
+  transform: scale(1.05);
+}
+
+.catalog__dot {
+  position: absolute;
+  top: clamp(0.9rem, 2vw, 1.25rem);
+  right: clamp(0.9rem, 2vw, 1.25rem);
+}
+
+/* Título y año, siempre visibles sobre la foto */
+.catalog__caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.75rem;
+  padding: 1.1rem clamp(1.25rem, 4vw, 2rem);
+  background: linear-gradient(to top, rgba(7, 3, 6, 0.88), transparent);
+  transition: opacity 0.3s ease;
+}
+
+.catalog__caption h3 {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+}
+
+.catalog__tech {
+  flex-basis: 100%;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--color-accent);
+}
+
+.catalog__caption .catalog__year {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.6;
+  white-space: nowrap;
+}
+
+/* Ficha de info: oculta hasta que pasas el ratón o llegas con el teclado. */
+.catalog__overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  padding: clamp(1.25rem, 4vw, 2rem);
+  background: rgba(7, 3, 6, 0.82);
+  color: var(--ink-light);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1), transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.catalog__link:hover .catalog__caption,
+.catalog__link:focus-visible .catalog__caption {
+  opacity: 0;
+}
+
+.catalog__link:hover .catalog__overlay,
+.catalog__link:focus-visible .catalog__overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.catalog__code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: var(--color-accent);
+}
+
+.catalog__overlay h3 {
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+}
+
+.catalog__description {
+  font-size: 0.9rem;
+  opacity: 0.78;
+}
+
+.catalog__stack {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  opacity: 0.55;
+}
+
+.catalog__cta {
+  margin-top: 0.25rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--color-accent);
+}
+
+.catalog__cta--muted {
+  color: currentColor;
+  opacity: 0.55;
+  font-style: italic;
+}
+
+@media (max-width: 40rem) {
+  .catalog__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .catalog__card:nth-child(odd) {
+    border-right: none;
+  }
+
+  .catalog__card:nth-last-child(-n + 2) {
+    border-bottom: 1px solid rgba(242, 233, 216, 0.18);
+  }
+
+  .catalog__card:last-child {
+    border-bottom: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catalog__image,
+  .catalog__caption,
+  .catalog__overlay {
+    transition: none;
+  }
+}

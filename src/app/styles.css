@@ -1,0 +1,77 @@
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1.25rem clamp(1.25rem, 4vw, 3rem);
+  background: var(--bg-dark);
+  color: var(--ink-light);
+  border-bottom: 1px solid rgba(242, 233, 216, 0.15);
+}
+
+.site-header__brand {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.site-header__nav {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.site-header__nav a {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.92rem;
+}
+
+.site-header__langs {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.site-header__lang {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.2rem 0.35rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  opacity: 0.5;
+  transition: opacity 0.2s ease;
+}
+
+.site-header__lang:hover,
+.site-header__lang:focus-visible {
+  opacity: 0.85;
+}
+
+.site-header__lang--active {
+  opacity: 1;
+  color: var(--color-accent);
+}
+
+main {
+  display: block;
+}
+
+.site-footer {
+  background: var(--bg-dark);
+  color: var(--ink-light);
+  padding: 2rem clamp(1.25rem, 4vw, 3rem);
+}
+
+.site-footer p {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  opacity: 0.55;
+  margin: 0;
+}

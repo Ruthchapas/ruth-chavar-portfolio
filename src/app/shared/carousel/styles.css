@@ -1,0 +1,77 @@
+:host {
+  display: block;
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: #1a1410;
+}
+
+.carousel__viewport {
+  position: absolute;
+  inset: 0;
+}
+
+.carousel__media {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.carousel__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.75rem;
+  height: 2.75rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(7, 3, 6, 0.55);
+  color: var(--ink-light);
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.carousel__nav:hover,
+.carousel__nav:focus-visible {
+  background: rgba(7, 3, 6, 0.8);
+}
+
+.carousel__nav--prev {
+  left: 1rem;
+}
+
+.carousel__nav--next {
+  right: 1rem;
+}
+
+.carousel__dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.carousel__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background: rgba(242, 233, 216, 0.4);
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.carousel__dot--active {
+  background: var(--color-accent);
+}

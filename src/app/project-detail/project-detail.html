@@ -1,0 +1,73 @@
+@if (project(); as p) {
+  <div class="project-detail container">
+    <a class="project-detail__back underline-draw" routerLink="/" fragment="proyectos">{{ t().detail.back }}</a>
+
+    <div class="project-detail__header">
+      @if (p.year) {
+        <span class="project-detail__year">{{ p.year }}</span>
+      }
+      <h1>{{ text()?.title }}</h1>
+    </div>
+
+    @if (p.gallery?.length) {
+      <app-carousel
+        class="project-detail__carousel"
+        [items]="p.gallery ?? []"
+        [alts]="text()?.galleryAlts ?? []"
+      />
+    }
+
+    <div class="project-detail__body">
+      @for (paragraph of paragraphs(); track $index) {
+        <p class="project-detail__paragraph">{{ paragraph }}</p>
+      }
+    </div>
+
+    @if (p.externalUrl) {
+      <a
+        class="project-detail__visit underline-draw"
+        [href]="p.externalUrl"
+        target="_blank"
+        rel="noopener noreferrer"
+      >{{ t().detail.visitApp }}</a>
+    }
+
+    @if (text()?.flow?.length) {
+      <section class="project-detail__section">
+        <h2>{{ t().detail.flowHeading }}</h2>
+        <ol class="project-detail__flow">
+          @for (step of text()?.flow; track $index) {
+            <li class="project-detail__flow-step"><span>{{ step }}</span></li>
+          }
+        </ol>
+      </section>
+    }
+
+    @if (text()?.features?.length) {
+      <section class="project-detail__section">
+        <h2>{{ t().detail.featuresHeading }}</h2>
+        <ul class="project-detail__features">
+          @for (feature of text()?.features; track $index) {
+            <li>{{ feature }}</li>
+          }
+        </ul>
+      </section>
+    }
+
+    @if (p.stack.length) {
+      <section class="project-detail__section">
+        <h2>{{ t().detail.stackHeading }}</h2>
+        <ul class="project-detail__stack">
+          @for (tech of p.stack; track tech) {
+            <li>{{ tech }}</li>
+          }
+        </ul>
+      </section>
+    }
+  </div>
+} @else {
+  <div class="project-detail container">
+    <p>{{ t().detail.notFound }}</p>
+    <a class="underline-draw" routerLink="/" fragment="proyectos">{{ t().detail.back }}</a>
+  </div>
+}
