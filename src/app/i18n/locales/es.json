@@ -10,7 +10,7 @@
       "e",
       "innovación."
     ],
-    "subtitle": "La tecnología transforma nuestra manera de relacionarnos con la cultura. Diseñar nuevas experiencias digitales también es una manera de cuestionar cono la creamos, la compartimos y la vivimos.",
+    "subtitle": "La tecnología transforma nuestra manera de relacionarnos con la cultura. Diseñar nuevas experiencias digitales también es una manera de cuestionar cómo la creamos, la compartimos y la vivimos.",
     "linkProjects": "ver proyectos",
     "linkContact": "escríbeme"
   },
@@ -78,6 +78,9 @@
     "featuresHeading": "qué hace",
     "stackHeading": "tecnologías",
     "notFound": "No encuentro este proyecto.",
-    "visitApp": "visitar la app →"
+    "visitApp": "visitar la app →",
+    "carouselPrev": "Anterior",
+    "carouselNext": "Siguiente",
+    "carouselGoTo": "Ir a la posición"
   }
 }

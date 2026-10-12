@@ -78,6 +78,9 @@
     "featuresHeading": "què fa",
     "stackHeading": "tecnologies",
     "notFound": "No trobo aquest projecte.",
-    "visitApp": "visitar l'app →"
+    "visitApp": "visitar l'app →",
+    "carouselPrev": "Anterior",
+    "carouselNext": "Següent",
+    "carouselGoTo": "Ves a la posició"
   }
 }

@@ -5,8 +5,7 @@ import { ProjectDetail } from './project-detail/project-detail';
 export const routes: Routes = [
   {
     path: '',
-    component: Home,
-    title: 'Tu nombre — Desarrollo web para cultura y patrimonio'
+    component: Home
   },
   {
     path: 'proyectos/:slug',

@@ -18,13 +18,13 @@
       type="button"
       class="carousel__nav carousel__nav--prev"
       (click)="prev()"
-      aria-label="Anterior"
+      [attr.aria-label]="t().detail.carouselPrev"
     >‹</button>
     <button
       type="button"
       class="carousel__nav carousel__nav--next"
       (click)="next()"
-      aria-label="Siguiente"
+      [attr.aria-label]="t().detail.carouselNext"
     >›</button>
 
     <div class="carousel__dots">
@@ -34,7 +34,7 @@
           class="carousel__dot"
           [class.carousel__dot--active]="$index === index()"
           (click)="goTo($index)"
-          [attr.aria-label]="'Ir a la posición ' + ($index + 1)"
+          [attr.aria-label]="t().detail.carouselGoTo + ' ' + ($index + 1)"
         ></button>
       }
     </div>

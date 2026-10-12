@@ -78,6 +78,9 @@
     "featuresHeading": "what it does",
     "stackHeading": "technologies",
     "notFound": "I can't find this project.",
-    "visitApp": "visit the app →"
+    "visitApp": "visit the app →",
+    "carouselPrev": "Previous",
+    "carouselNext": "Next",
+    "carouselGoTo": "Go to item"
   }
 }
