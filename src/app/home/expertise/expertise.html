@@ -1,0 +1,28 @@
+<div class="expertise">
+  <div class="container">
+  <h2>En qué ayudo</h2>
+  <ul class="expertise__list">
+    @for (item of items; track item.id; let i = $index) {
+      <li
+        class="expertise__item"
+        [class.expertise__item--open]="openId() === item.id"
+        [style.transition-delay.ms]="i * 60"
+      >
+        <button
+          type="button"
+          class="expertise__trigger"
+          (click)="toggle(item.id)"
+          [attr.aria-expanded]="openId() === item.id"
+        >
+          <span class="expertise__number">{{ i + 1 }}</span>
+          <span class="expertise__title">{{ item.title }}</span>
+          <span class="expertise__icon" aria-hidden="true"></span>
+        </button>
+        @if (openId() === item.id) {
+          <p class="expertise__detail">{{ item.detail }}</p>
+        }
+      </li>
+    }
+  </ul>
+  </div>
+</div>

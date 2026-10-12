@@ -1,0 +1,83 @@
+{
+  "documentTitle": "Ruth Chavar — desenvolupadora web per a cultura i patrimoni",
+  "nav": {
+    "projects": "projectes",
+    "about": "sobre mi"
+  },
+  "hero": {
+    "titleWords": [
+      "cultura",
+      "i",
+      "innovació."
+    ],
+    "subtitle": "La tecnologia transforma la nostra manera de relacionar-nos amb la cultura. Dissenyar noves experiències digitals també és una manera de qüestionar com la creem, la compartim i la vivim.",
+    "linkProjects": "veure projectes",
+    "linkContact": "escriu-me"
+  },
+  "catalog": {
+    "heading": "projectes",
+    "cta": "visitar el lloc →",
+    "privateLabel": "projecte intern",
+    "viewProjectAria": "Veure projecte:",
+    "projects": {
+      "P.01": {
+        "title": "Web corporativa — Grup CIEF",
+        "description": "Lloc web corporatiu de Grup CIEF."
+      },
+      "P.02": {
+        "title": "Backoffice — Grup CIEF",
+        "description": "Backoffice intern de gestió per al lloc web de Grup CIEF.",
+        "detail": [
+          "El backoffice és el tauler intern de gestió de continguts (CMS) del web de Grup CIEF: l'eina des de la qual s'administra el que es publica a grupcief.com.",
+          "Funciona com una plataforma independent del web. Està desenvolupat amb Angular, desa la informació en una base de dades SQL i es connecta amb el web mitjançant una API, de manera que el que s'edita aquí és el que apareix publicat."
+        ],
+        "flow": [
+          "Backoffice (Angular)",
+          "API",
+          "Web de Grup CIEF"
+        ]
+      },
+      "P.03": {
+        "title": "Landing de formacions — Grup CIEF",
+        "description": "Landing de captació per a les formacions i certificats professionals de Grup CIEF."
+      },
+      "P.04": {
+        "title": "Medievalismes — mapa de rutes",
+        "description": "Aplicació de mapa que recomana rutes medievalistes catalanes, creada en col·laboració amb un compte d'història de l'art a Instagram i TikTok.",
+        "detail": [
+          "Medievalismes és una aplicació web per descobrir el patrimoni medieval de Catalunya sobre un mapa. Neix en col·laboració amb un compte d'història de l'art a Instagram i TikTok, i converteix aquest contingut divulgatiu en llocs i rutes que es poden recórrer.",
+          "Cada lloc té la seva fitxa, amb context històric, punts destacats dibuixats al mapa, galeria de fotos a pantalla completa i llocs propers amb la seva distància. Els llocs s'agrupen per comarca i també es poden recórrer mitjançant col·leccions temàtiques, com les esglésies romàniques del Collsacabra."
+        ],
+        "features": [
+          "Mapa interactiu amb la paleta de la marca i els punts destacats de cada lloc",
+          "Cerca per població o comarca, amb filtres",
+          "Fitxes de lloc amb relat, galeria a pantalla completa i llocs propers",
+          "Col·leccions temàtiques de llocs (rutes)",
+          "Llocs desats, amb accés opcional per enllaç al correu per sincronitzar-los entre dispositius",
+          "Contingut gestionat des d'un CMS, sense tocar codi",
+          "Dissenyada per a mòbil i adaptada a tauleta"
+        ],
+        "galleryAlts": [
+          "Mapa de l'app amb els llocs del Collsacabra, vista dels punts destacats de Rupit i la targeta d'un d'ells",
+          "Fitxa de Rupit amb foto, relat i punts destacats, galeria d'imatges i visor de fotos a pantalla completa"
+        ]
+      }
+    }
+  },
+  "about": {
+    "heading": "sobre mi",
+    "paragraphs": [
+      "Soc historiadora de formació i desenvolupadora web. Creo i desenvolupo aplicacions i experiències digitals, combinant coneixements d’humanitats i tecnologia.",
+      "Treballo en projectes propis i col·laboratius, des d’aplicacions culturals i de patrimoni fins a solucions digitals per a altres àmbits."
+    ],
+    "stack": "Angular, TypeScript, Node.js, PostgreSQL."
+  },
+  "detail": {
+    "back": "← tornar a projectes",
+    "flowHeading": "com funciona",
+    "featuresHeading": "què fa",
+    "stackHeading": "tecnologies",
+    "notFound": "No trobo aquest projecte.",
+    "visitApp": "visitar l'app →"
+  }
+}

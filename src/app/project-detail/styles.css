@@ -1,0 +1,139 @@
+:host {
+  display: block;
+  min-height: 100svh;
+  background: var(--bg-dark);
+  color: var(--ink-light);
+  padding-top: clamp(3rem, 7vw, 5rem);
+  padding-bottom: clamp(4rem, 9vw, 6rem);
+}
+
+.project-detail__back {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.project-detail__header {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.project-detail__year {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent);
+  margin-bottom: 0.5rem;
+}
+
+.project-detail__header h1 {
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  max-width: 20ch;
+}
+
+.project-detail__carousel {
+  display: block;
+  margin-bottom: 2.5rem;
+}
+
+.project-detail__body {
+  max-width: 42rem;
+}
+
+.project-detail__paragraph {
+  font-size: 1.05rem;
+  opacity: 0.85;
+}
+
+.project-detail__paragraph + .project-detail__paragraph {
+  margin-top: 1.1rem;
+}
+
+.project-detail__visit {
+  display: inline-block;
+  margin-top: 1.75rem;
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--color-accent);
+}
+
+.project-detail__section {
+  margin-top: 2.75rem;
+}
+
+.project-detail__section h2 {
+  font-size: 1.1rem;
+  margin-bottom: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Esquema de flujo: cajas unidas por flechas */
+.project-detail__flow {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-detail__flow-step {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.project-detail__flow-step span {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.75rem 1.1rem;
+  border: 1px solid rgba(242, 233, 216, 0.4);
+}
+
+.project-detail__flow-step:not(:last-child)::after {
+  content: '→';
+  color: var(--color-accent);
+}
+
+.project-detail__features {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-width: 42rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.project-detail__features li {
+  position: relative;
+  padding-left: 1.4rem;
+  opacity: 0.85;
+}
+
+.project-detail__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.7em;
+  width: 0.5rem;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+.project-detail__stack {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-detail__stack li {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 0.4rem 0.8rem;
+  border: 1px solid rgba(242, 233, 216, 0.3);
+}

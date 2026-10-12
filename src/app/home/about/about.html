@@ -1,0 +1,15 @@
+<div class="about container">
+  <h2>{{ t().about.heading }}</h2>
+  @for (paragraph of t().about.paragraphs; track $index) {
+    <p>{{ paragraph }}</p>
+  }
+  <p class="about__stack">{{ t().about.stack }}</p>
+
+  <div class="about__contact">
+    <a class="about__email underline-draw" href="mailto:ruthchavar@gmail.com">ruthchavar@gmail.com</a>
+    <div class="about__social">
+      <a class="underline-draw" href="#">linkedin</a>
+      <a class="underline-draw" href="https://github.com/Ruthchapas" target="_blank" rel="noopener noreferrer">github</a>
+    </div>
+  </div>
+</div>

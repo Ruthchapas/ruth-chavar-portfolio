@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Guía de marca — Ruth Chavar</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Onest:wght@500;700;800&family=Quicksand:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg-dark: #070306;
+    --bg-light: #f2e9d8;
+    --ink-light: #f2e9d8;
+    --ink-dark: #1f150e;
+    --gold: #d9a62d;
+    --wine: #c30a05;
+    --font-display: 'Onest', sans-serif;
+    --font-body: 'Quicksand', sans-serif;
+    --font-mono: 'IBM Plex Mono', monospace;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg-light);
+    color: var(--ink-dark);
+    font-family: var(--font-body);
+    line-height: 1.6;
+  }
+  .wrap { max-width: 46rem; margin: 0 auto; }
+  section { padding: 3rem 1.75rem; }
+  h1, h2 { font-family: var(--font-display); font-weight: 800; margin: 0; }
+  h3 { font-family: var(--font-display); font-weight: 700; margin: 0; }
+  p { margin: 0; }
+  .eyebrow { font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.6; margin: 0 0 0.75rem; }
+
+  /* Cabecera */
+  .cover {
+    background: var(--bg-dark);
+    color: var(--ink-light);
+    padding: 4rem 1.75rem 3rem;
+  }
+  .cover .brand { font-size: 1.1rem; margin-bottom: 2.5rem; }
+  .cover h1 { font-size: clamp(2.25rem, 7vw, 3.25rem); line-height: 1.05; max-width: 11ch; }
+  .cover .subtitle { font-family: var(--font-body); font-size: 1.05rem; opacity: 0.7; margin-top: 1rem; max-width: 30rem; }
+
+  /* Personalidad */
+  .personality-tags { display: flex; gap: 0.6rem; flex-wrap: wrap; margin-top: 1.25rem; }
+  .tag {
+    font-family: var(--font-mono); font-size: 0.78rem;
+    border: 1.5px solid var(--ink-dark); border-radius: 3px;
+    padding: 0.35rem 0.7rem;
+  }
+  .refs { margin-top: 1.5rem; font-size: 0.95rem; opacity: 0.75; max-width: 32rem; }
+
+  /* Color */
+  .color-section { background: var(--bg-dark); color: var(--ink-light); }
+  .color-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.75rem; margin-top: 1.5rem; }
+  .swatch { border-radius: 4px; overflow: hidden; border: 1px solid rgba(242,233,216,0.15); }
+  .swatch-fill { height: 5rem; }
+  .swatch-info { padding: 0.75rem 0.9rem; background: rgba(242,233,216,0.04); }
+  .swatch-name { font-family: var(--font-display); font-weight: 700; font-size: 0.95rem; }
+  .swatch-hex { font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.6; margin-top: 0.15rem; }
+  .swatch-role { font-family: var(--font-body); font-size: 0.82rem; opacity: 0.7; margin-top: 0.35rem; }
+
+  /* Tipografía */
+  .type-sample { margin-top: 1.75rem; padding-top: 1.5rem; border-top: 1px solid rgba(31,21,14,0.15); }
+  .type-sample:first-of-type { border-top: none; padding-top: 0; }
+  .type-label { font-family: var(--font-mono); font-size: 0.72rem; opacity: 0.55; margin-bottom: 0.5rem; }
+  .type-display { font-family: var(--font-display); font-weight: 800; font-size: clamp(1.6rem, 5vw, 2.4rem); line-height: 1.05; }
+  .type-body { font-family: var(--font-body); font-size: 1.05rem; max-width: 30rem; opacity: 0.85; }
+  .type-mono { font-family: var(--font-mono); font-size: 0.85rem; color: var(--gold); }
+
+  /* Layout */
+  .layout-list { list-style: none; padding: 0; margin: 1.5rem 0 0; }
+  .layout-list li {
+    padding: 1rem 0; border-top: 1px solid rgba(31,21,14,0.15);
+    display: grid; grid-template-columns: 8rem 1fr; gap: 1rem;
+  }
+  .layout-list li:last-child { border-bottom: 1px solid rgba(31,21,14,0.15); }
+  .layout-list dt { font-family: var(--font-mono); font-size: 0.78rem; opacity: 0.55; }
+  .layout-list dd { margin: 0; font-size: 0.95rem; }
+
+  .sitemap { margin-top: 1.5rem; display: flex; flex-direction: column; border: 2px solid var(--ink-dark); border-radius: 4px; overflow: hidden; }
+  .sitemap div { padding: 0.6rem 1rem; font-family: var(--font-mono); font-size: 0.8rem; }
+  .sitemap .dark { background: var(--bg-dark); color: var(--ink-light); }
+  .sitemap .light { background: var(--bg-light); color: var(--ink-dark); border-top: 1px solid rgba(31,21,14,0.15); border-bottom: 1px solid rgba(31,21,14,0.15); }
+
+  /* Movimiento */
+  .motion-section { background: var(--bg-dark); color: var(--ink-light); }
+  .motion-list { list-style: none; padding: 0; margin: 1.5rem 0 0; display: flex; flex-direction: column; gap: 1rem; }
+  .motion-list li { padding-left: 1.5rem; position: relative; font-size: 0.95rem; opacity: 0.85; }
+  .motion-list li::before { content: ''; position: absolute; left: 0; top: 0.5rem; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .motion-rule {
+    margin-top: 2rem; padding: 1.25rem; border: 1.5px solid var(--gold); border-radius: 4px;
+    font-family: var(--font-mono); font-size: 0.82rem; opacity: 0.9;
+  }
+
+  /* Voz */
+  .voice-example { margin-top: 1.5rem; }
+  .voice-example .word { font-family: var(--font-display); font-weight: 700; font-size: 1.3rem; }
+
+  footer { padding: 2rem 1.75rem; border-top: 2px solid var(--ink-dark); }
+  footer p { font-family: var(--font-mono); font-size: 0.75rem; opacity: 0.55; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="cover">
+    <p class="brand">ruth chavar.</p>
+    <h1>guía de marca.</h1>
+    <p class="subtitle">Un resumen de las decisiones de diseño construidas paso a paso — personalidad, color, tipografía, layout y movimiento — para tener a mano cuando haga falta explicar el porqué.</p>
+  </div>
+
+  <section>
+    <p class="eyebrow">01 — personalidad</p>
+    <h2>Moderna, profesional, con carácter.</h2>
+    <div class="personality-tags">
+      <span class="tag">moderna</span>
+      <span class="tag">punto medio minimalista / expresiva</span>
+      <span class="tag">profesional</span>
+    </div>
+    <p class="refs">Referencias: misterio.studio (tipografía redonda, minúsculas, tono directo), Pulp Fiction, Suspiria / Dario Argento, The Love Witch — resumido en "cartel gráfico y plano", sin sacrificar la accesibilidad.</p>
+  </section>
+
+  <section class="color-section">
+    <p class="eyebrow" style="opacity:0.6">02 — color</p>
+    <h2>Cuatro colores, cuatro papeles fijos.</h2>
+    <div class="color-grid">
+      <div class="swatch">
+        <div class="swatch-fill" style="background:#070306"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Negro</p>
+          <p class="swatch-hex">#070306</p>
+          <p class="swatch-role">Cabecera, hero, proyectos, footer</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-fill" style="background:#f2e9d8"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Crema</p>
+          <p class="swatch-hex">#F2E9D8</p>
+          <p class="swatch-role">Sobre mí, contacto</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-fill" style="background:#d9a62d"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Dorado</p>
+          <p class="swatch-hex">#D9A62D</p>
+          <p class="swatch-role">Acento principal — enlaces, CTAs, hover</p>
+        </div>
+      </div>
+      <div class="swatch">
+        <div class="swatch-fill" style="background:#c30a05"></div>
+        <div class="swatch-info">
+          <p class="swatch-name">Rojo vino</p>
+          <p class="swatch-hex">#C30A05</p>
+          <p class="swatch-role">Detalle raro y pequeño — nunca como texto grande</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">03 — tipografía</p>
+    <h2>Tres voces, tres trabajos.</h2>
+
+    <div class="type-sample">
+      <p class="type-label">Onest · 800 — títulos, con toda la personalidad</p>
+      <p class="type-display">hago sitios web con carácter.</p>
+    </div>
+
+    <div class="type-sample">
+      <p class="type-label">Quicksand · 400/500 — cuerpo de texto</p>
+      <p class="type-body">Aplicaciones web y proyectos culturales. Ruth Chavar, desarrolladora — texto pensado para leerse cómodo, sin competir con el titular.</p>
+    </div>
+
+    <div class="type-sample">
+      <p class="type-label">IBM Plex Mono · 500 — datos reales</p>
+      <p class="type-mono">angular — typescript — 2026</p>
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">04 — layout y espacio</p>
+    <h2>Asimétrica. Espaciosa. En orden.</h2>
+    <dl class="layout-list">
+      <li><dt>Composición</dt><dd>Asimétrica, alineada a la izquierda — no centrada.</dd></li>
+      <li><dt>Densidad</dt><dd>Espaciosa a propósito: menos información por pantalla, más aire alrededor de cada cosa.</dd></li>
+      <li><dt>Proyectos</dt><dd>Muestran solo título y año; la descripción y el stack se revelan al pasar el ratón o llegar con el teclado.</dd></li>
+    </dl>
+
+    <p class="type-label" style="margin-top:2rem">mapa de secciones</p>
+    <div class="sitemap">
+      <div class="dark">cabecera — oscuro</div>
+      <div class="dark">hero (vídeo de fondo) — oscuro</div>
+      <div class="dark">proyectos — oscuro</div>
+      <div class="light">sobre mí — claro</div>
+      <div class="light">contacto — claro</div>
+      <div class="dark">footer — oscuro</div>
+    </div>
+  </section>
+
+  <section class="motion-section">
+    <p class="eyebrow" style="opacity:0.6">05 — movimiento</p>
+    <h2>Solo si respondes tú.</h2>
+    <ul class="motion-list">
+      <li>El titular del hero entra en cascada, palabra por palabra, una sola vez.</li>
+      <li>Los enlaces se subrayan al pasar el ratón, con el trazo dibujándose.</li>
+      <li>Cada sección aparece con un fundido suave la primera vez que entra en pantalla al hacer scroll.</li>
+      <li>El acordeón y los detalles de proyecto se abren con una transición, nunca de golpe.</li>
+    </ul>
+    <div class="motion-rule">
+      regla fija: el movimiento responde a scroll, hover o clic — nunca se mueve solo, nunca en bucle, nunca parpadea. siempre respeta "reducir movimiento".
+    </div>
+  </section>
+
+  <section>
+    <p class="eyebrow">06 — voz</p>
+    <h2>Minúsculas. Directa. Sin solemnidad.</h2>
+    <p class="type-body" style="margin-top:1rem">Como en misterio.studio: minúsculas incluso en títulos y navegación, frases cortas, tono de igual a igual — nunca "corporativo".</p>
+    <div class="voice-example">
+      <span class="word">ver proyectos</span> · <span class="word">escríbeme</span> · <span class="word">hablemos</span>
+    </div>
+  </section>
+
+  <footer>
+    <p>ruth chavar — guía de marca · 2026</p>
+  </footer>
+
+</div>
+</body>
+</html>

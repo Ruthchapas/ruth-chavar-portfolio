@@ -1,0 +1,28 @@
+<header class="site-header">
+  <a class="site-header__brand" routerLink="/" fragment="inicio">ruth chavar.</a>
+  <nav class="site-header__nav">
+    <a class="underline-draw" routerLink="/" fragment="proyectos">{{ t().nav.projects }}</a>
+    <a class="underline-draw" routerLink="/" fragment="sobre-mi">{{ t().nav.about }}</a>
+  </nav>
+  <div class="site-header__langs">
+    @for (l of locales; track l) {
+      <button
+        type="button"
+        class="site-header__lang"
+        [class.site-header__lang--active]="locale() === l"
+        [attr.aria-pressed]="locale() === l"
+        (click)="setLocale(l)"
+      >
+        {{ l }}
+      </button>
+    }
+  </div>
+</header>
+
+<main>
+  <router-outlet />
+</main>
+
+<footer class="site-footer">
+  <p>ruth chavar © {{ year }}</p>
+</footer>

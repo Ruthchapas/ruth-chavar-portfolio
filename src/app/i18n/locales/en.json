@@ -1,0 +1,83 @@
+{
+  "documentTitle": "Ruth Chavar — web developer for culture and heritage",
+  "nav": {
+    "projects": "projects",
+    "about": "about"
+  },
+  "hero": {
+    "titleWords": [
+      "culture",
+      "and",
+      "innovation."
+    ],
+    "subtitle": "Technology is transforming the way we engage with culture. Designing new digital experiences is also a way of questioning how we create, share, and experience it.",
+    "linkProjects": "see projects",
+    "linkContact": "get in touch"
+  },
+  "catalog": {
+    "heading": "projects",
+    "cta": "visit site →",
+    "privateLabel": "internal project",
+    "viewProjectAria": "View project:",
+    "projects": {
+      "P.01": {
+        "title": "Corporate website — Grup CIEF",
+        "description": "Corporate website for Grup CIEF."
+      },
+      "P.02": {
+        "title": "Backoffice — Grup CIEF",
+        "description": "Internal management backoffice for the Grup CIEF website.",
+        "detail": [
+          "The backoffice is the internal content management system (CMS) for the Grup CIEF website: the tool used to manage everything published on grupcief.com.",
+          "It works as a platform independent from the website. It is built with Angular, stores its data in an SQL database and connects to the website through an API, so what is edited here is what appears published."
+        ],
+        "flow": [
+          "Backoffice (Angular)",
+          "API",
+          "Grup CIEF website"
+        ]
+      },
+      "P.03": {
+        "title": "Training programs landing page — Grup CIEF",
+        "description": "Lead-generation landing page for Grup CIEF's professional training certificates."
+      },
+      "P.04": {
+        "title": "Medievalismes — route map",
+        "description": "Map app recommending Catalan medievalist routes, built in collaboration with an art-history Instagram and TikTok account.",
+        "detail": [
+          "Medievalismes is a web app for discovering Catalonia's medieval heritage on a map. It was created in collaboration with an art-history account on Instagram and TikTok, and turns that educational content into places and routes you can actually visit.",
+          "Every place has its own page, with historical context, highlights drawn on the map, a full-screen photo gallery and nearby places with their distance. Places are grouped by comarca and can also be explored through themed collections, such as the Romanesque churches of the Collsacabra."
+        ],
+        "features": [
+          "Interactive map in the brand palette, with each place's highlights",
+          "Search by town or comarca, with filters",
+          "Place pages with story, full-screen gallery and nearby places",
+          "Themed collections of places (routes)",
+          "Saved places, with optional email-link sign-in to sync them across devices",
+          "Content managed from a CMS, no code changes needed",
+          "Designed for mobile and adapted to tablets"
+        ],
+        "galleryAlts": [
+          "The app's map with Collsacabra places, Rupit's highlights and the card for one of them",
+          "Rupit's page with photo, story and highlights, image gallery and full-screen photo viewer"
+        ]
+      }
+    }
+  },
+  "about": {
+    "heading": "about me",
+    "paragraphs": [
+      "I have a background in History and work as a web developer. I create and develop digital applications and experiences, combining knowledge of the humanities and technology.",
+      "I work on both independent and collaborative projects, ranging from cultural and heritage applications to digital solutions for other fields."
+    ],
+    "stack": "Angular, TypeScript, Node.js, PostgreSQL."
+  },
+  "detail": {
+    "back": "← back to projects",
+    "flowHeading": "how it works",
+    "featuresHeading": "what it does",
+    "stackHeading": "technologies",
+    "notFound": "I can't find this project.",
+    "visitApp": "visit the app →"
+  }
+}

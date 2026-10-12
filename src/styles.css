@@ -1,0 +1,138 @@
+:root {
+  /* Dos lienzos, con roles fijos por sección */
+  --bg-dark: #070306;
+  --bg-light: #f2e9d8;
+  --ink-light: #f2e9d8;
+  --ink-dark: #1f150e;
+
+  --color-accent: #d9a62d;   /* dorado — acento principal, en todo el sitio */
+  --color-wine: #c30a05;     /* rojo vino — detalle raro y pequeño, nunca texto grande */
+
+  --font-display: 'Onest', sans-serif;
+  --font-body: 'Quicksand', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  --max-width: 72rem;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg-dark);
+  color: var(--ink-light);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  line-height: 1.05;
+  margin: 0;
+}
+
+h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* Revelado en cascada, palabra por palabra */
+@keyframes word-in {
+  from {
+    opacity: 0;
+    transform: translateY(22px) rotate(-2deg);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.word {
+  display: inline-block;
+  opacity: 0;
+  animation: word-in 0.65s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+/* Subrayado que se dibuja al pasar el ratón */
+.underline-draw {
+  position: relative;
+  display: inline-block;
+  padding-bottom: 3px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.underline-draw::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 0%;
+  background: var(--color-accent);
+  transition: width 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.underline-draw:hover {
+  color: var(--color-accent);
+}
+
+.underline-draw:hover::after,
+.underline-draw:focus-visible::after {
+  width: 100%;
+}
+
+/* Punto rojo — el único uso permitido del acento raro */
+.wine-dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--color-wine);
+  flex-shrink: 0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+
+  .word {
+    opacity: 1 !important;
+  }
+}

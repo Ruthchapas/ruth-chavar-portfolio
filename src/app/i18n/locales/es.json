@@ -1,0 +1,83 @@
+{
+  "documentTitle": "Ruth Chavar — desarrolladora web para cultura y patrimonio",
+  "nav": {
+    "projects": "proyectos",
+    "about": "sobre mí"
+  },
+  "hero": {
+    "titleWords": [
+      "cultura",
+      "e",
+      "innovación."
+    ],
+    "subtitle": "La tecnología transforma nuestra manera de relacionarnos con la cultura. Diseñar nuevas experiencias digitales también es una manera de cuestionar cono la creamos, la compartimos y la vivimos.",
+    "linkProjects": "ver proyectos",
+    "linkContact": "escríbeme"
+  },
+  "catalog": {
+    "heading": "proyectos",
+    "cta": "visitar sitio →",
+    "privateLabel": "proyecto interno",
+    "viewProjectAria": "Ver proyecto:",
+    "projects": {
+      "P.01": {
+        "title": "Web corporativa — Grup CIEF",
+        "description": "Sitio web corporativo de Grup CIEF."
+      },
+      "P.02": {
+        "title": "Backoffice — Grup CIEF",
+        "description": "Backoffice interno de gestión para la web de Grup CIEF.",
+        "detail": [
+          "El backoffice es el panel interno de gestión de contenidos (CMS) de la web de Grup CIEF: la herramienta desde la que se administra lo que se publica en grupcief.com.",
+          "Funciona como una plataforma independiente de la web. Está desarrollado con Angular, guarda la información en una base de datos SQL y se conecta con la web a través de una API, de modo que lo que se edita aquí es lo que aparece publicado."
+        ],
+        "flow": [
+          "Backoffice (Angular)",
+          "API",
+          "Web de Grup CIEF"
+        ]
+      },
+      "P.03": {
+        "title": "Landing de formaciones — Grup CIEF",
+        "description": "Landing de captación para las formaciones y certificados profesionales de Grup CIEF."
+      },
+      "P.04": {
+        "title": "Medievalismes — mapa de rutas",
+        "description": "Aplicación de mapa que recomienda rutas medievalistas catalanas, creada en colaboración con una cuenta de historia del arte en Instagram y TikTok.",
+        "detail": [
+          "Medievalismes es una aplicación web para descubrir el patrimonio medieval de Cataluña sobre un mapa. Nace en colaboración con una cuenta de historia del arte en Instagram y TikTok, y convierte ese contenido divulgativo en lugares y rutas que se pueden recorrer.",
+          "Cada lugar tiene su ficha, con contexto histórico, puntos destacados dibujados en el mapa, galería de fotos a pantalla completa y lugares cercanos con su distancia. Los lugares se agrupan por comarca y también se pueden recorrer mediante colecciones temáticas, como las iglesias románicas del Collsacabra."
+        ],
+        "features": [
+          "Mapa interactivo con la paleta de la marca y los puntos destacados de cada lugar",
+          "Búsqueda por población o comarca, con filtros",
+          "Fichas de lugar con relato, galería a pantalla completa y lugares cercanos",
+          "Colecciones temáticas de lugares (rutas)",
+          "Lugares guardados, con acceso opcional por enlace al correo para sincronizarlos entre dispositivos",
+          "Contenido gestionado desde un CMS, sin tocar código",
+          "Diseñada para móvil y adaptada a tableta"
+        ],
+        "galleryAlts": [
+          "Mapa de la app con los lugares del Collsacabra, vista de los puntos destacados de Rupit y la tarjeta de uno de ellos",
+          "Ficha de Rupit con foto, relato y puntos destacados, galería de imágenes y visor de fotos a pantalla completa"
+        ]
+      }
+    }
+  },
+  "about": {
+    "heading": "sobre mí",
+    "paragraphs": [
+      "Soy historiadora de formación y desarrolladora web. Creo y desarrollo aplicaciones y experiencias digitales, combinando conocimientos de humanidades y tecnología.",
+      "Trabajo en proyectos propios y colaborativos, desde aplicaciones culturales y de patrimonio hasta soluciones digitales para otros ámbitos."
+    ],
+    "stack": "Angular, TypeScript, Node.js, PostgreSQL."
+  },
+  "detail": {
+    "back": "← volver a proyectos",
+    "flowHeading": "cómo funciona",
+    "featuresHeading": "qué hace",
+    "stackHeading": "tecnologías",
+    "notFound": "No encuentro este proyecto.",
+    "visitApp": "visitar la app →"
+  }
+}
