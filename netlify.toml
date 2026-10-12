@@ -1,0 +1,8 @@
+# Netlify lee esto al construir el proyecto desde el repositorio.
+[build]
+  command = "npm run build"
+  publish = "dist/portfolio-cultura-digital/browser"
+
+[build.environment]
+  # Angular 21 necesita Node 20.19+ / 22.12+.
+  NODE_VERSION = "22"

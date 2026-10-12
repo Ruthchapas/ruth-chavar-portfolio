@@ -45,5 +45,8 @@ export interface Translations {
     featuresHeading: string;
     stackHeading: string;
     notFound: string;
+    carouselPrev: string;
+    carouselNext: string;
+    carouselGoTo: string;
   };
 }

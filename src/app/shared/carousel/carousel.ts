@@ -1,4 +1,5 @@
-import { Component, computed, input, signal } from '@angular/core';
+import { Component, computed, inject, input, signal } from '@angular/core';
+import { I18n } from '../../i18n/i18n';
 import { GalleryItem } from '../../models/project';
 
 @Component({
@@ -8,6 +9,8 @@ import { GalleryItem } from '../../models/project';
   styleUrl: './styles.css'
 })
 export class Carousel {
+  readonly t = inject(I18n).t;
+
   readonly items = input.required<GalleryItem[]>();
   /** Texto alternativo de cada elemento, en el mismo orden que `items`. */
   readonly alts = input<string[]>([]);
