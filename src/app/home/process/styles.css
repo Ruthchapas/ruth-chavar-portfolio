@@ -1,0 +1,134 @@
+/* Banda oscura: cómo trabajo + contacto. Misma retícula que «servicios». */
+:host {
+  display: block;
+  background: var(--bg-dark);
+  color: var(--ink-light);
+  padding: clamp(2.5rem, 5vw, 4rem) 0;
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:host(.is-visible) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+}
+
+.process__intro,
+.process__contact {
+  display: grid;
+  grid-template-columns: minmax(8rem, 1fr) 3fr;
+  gap: 1.5rem 3rem;
+}
+
+.process__intro {
+  align-items: start;
+}
+
+/* Línea de tiempo: un punto por paso unido por una línea fina. */
+.process__steps {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 2rem;
+}
+
+.process__steps li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 1.6rem;
+}
+
+.process__steps li::before {
+  content: '';
+  position: absolute;
+  top: 0.25rem;
+  left: 0;
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background: var(--color-accent);
+}
+
+.process__steps li::after {
+  content: '';
+  position: absolute;
+  top: calc(0.25rem + 0.3rem);
+  left: 1rem;
+  right: -2rem;
+  height: 1px;
+  background: rgba(242, 233, 216, 0.3);
+}
+
+.process__steps li:last-child::after {
+  display: none;
+}
+
+.process__steps strong {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.05rem, 1.6vw, 1.25rem);
+  line-height: 1.2;
+}
+
+.process__steps li > span {
+  font-size: 0.9rem;
+  line-height: 1.45;
+  opacity: 0.7;
+}
+
+.process__contact {
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+
+/* Texto grande con el subrayado dorado animado. */
+.process__cta {
+  grid-column: 2;
+  justify-self: start;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.6rem, 4.5vw, 3rem);
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  text-decoration: none;
+}
+
+@media (max-width: 52rem) {
+  .process__intro,
+  .process__contact {
+    grid-template-columns: 1fr;
+  }
+
+  .process__cta {
+    grid-column: 1;
+  }
+
+  .process__steps {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-left: 1.4rem;
+    border-left: 1px solid rgba(242, 233, 216, 0.3);
+  }
+
+  .process__steps li {
+    padding-top: 0;
+  }
+
+  .process__steps li::before {
+    top: 0.4rem;
+    left: calc(-1.4rem - 0.3rem);
+  }
+
+  .process__steps li::after {
+    display: none;
+  }
+}

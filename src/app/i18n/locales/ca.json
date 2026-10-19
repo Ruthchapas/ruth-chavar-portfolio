@@ -2,6 +2,7 @@
   "documentTitle": "Ruth Chavar — desenvolupadora web per a cultura i patrimoni",
   "nav": {
     "projects": "projectes",
+    "services": "serveis",
     "about": "sobre mi"
   },
   "hero": {
@@ -63,6 +64,50 @@
         ]
       }
     }
+  },
+  "services": {
+    "heading": "serveis",
+    "intro": "Webs i aplicacions per a museus, entitats culturals, divulgadors i projectes de patrimoni. Pressupost tancat, continguts editables sense tocar codi i acompanyament abans i després de publicar.",
+    "items": [
+      {
+        "title": "Web de presència",
+        "description": "Una pàgina clara i ràpida, adaptada a mòbil, amb formulari de contacte i publicada amb el teu propi domini. Per donar a conèixer una entitat, una exposició o un projecte."
+      },
+      {
+        "title": "Web amb gestor de continguts",
+        "description": "Una web de diverses pàgines amb un tauler senzill per editar textos, imatges i agenda sense tocar codi. Inclou una sessió de formació i, si cal, diversos idiomes."
+      },
+      {
+        "title": "Mapes i rutes interactives",
+        "description": "Mapes amb llocs, fitxes, galeries i rutes temàtiques per donar a conèixer patrimoni, itineraris o col·leccions. Com Medievalismes, adaptat al teu projecte."
+      },
+      {
+        "title": "Manteniment",
+        "description": "Actualitzacions, canvis petits i suport després de la publicació, perquè el web continuï viu."
+      }
+    ],
+    "processHeading": "com treballo",
+    "process": [
+      {
+        "title": "Parlem",
+        "text": "Una trucada breu per entendre què necessites i a qui va adreçat."
+      },
+      {
+        "title": "Pressupost tancat",
+        "text": "Abast, terminis i preu per escrit abans de començar."
+      },
+      {
+        "title": "Desenvolupament amb lliuraments",
+        "text": "T'ensenyo avenços cada setmana per ajustar a temps."
+      },
+      {
+        "title": "Publicació i formació",
+        "text": "Publico el web i t'ensenyo a gestionar-lo."
+      }
+    ],
+    "cta": "explica'm el teu projecte →",
+    "ctaSubject": "Consulta sobre un projecte web",
+    "ask": "consultar aquest servei →"
   },
   "about": {
     "heading": "sobre mi",

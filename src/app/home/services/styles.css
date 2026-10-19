@@ -1,0 +1,198 @@
+:host {
+  display: block;
+  background: var(--bg-light);
+  color: var(--ink-dark);
+  padding-top: clamp(4rem, 9vw, 7rem);
+
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:host(.is-visible) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+}
+
+/* Retícula compartida con «cómo trabajo»: título en la columna estrecha,
+   contenido en la ancha. */
+.services__head {
+  display: grid;
+  grid-template-columns: minmax(8rem, 1fr) 3fr;
+  gap: 1.5rem 3rem;
+}
+
+.services {
+  padding-bottom: clamp(3rem, 6vw, 4.5rem);
+}
+
+.services__head {
+  margin-bottom: clamp(1.75rem, 4vw, 3rem);
+}
+
+.services__intro {
+  max-width: 44rem;
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.6vw, 1.9rem);
+  line-height: 1.25;
+  letter-spacing: -0.01em;
+}
+
+.services__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(31, 21, 14, 0.85);
+}
+
+.services__item {
+  border-bottom: 1px solid rgba(31, 21, 14, 0.2);
+}
+
+.services__item h3 {
+  margin: 0;
+  font: inherit;
+}
+
+/* Fila desplegable: número · título · «+». */
+.services__trigger {
+  display: grid;
+  grid-template-columns: calc((100% - 3rem) / 4) 1fr auto;
+  gap: 0 3rem;
+  align-items: center;
+  width: 100%;
+  padding: clamp(1.1rem, 2.2vw, 1.5rem) 0;
+  background: none;
+  border: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+.services__trigger:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.services__number {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--color-accent);
+}
+
+.services__title {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-size: clamp(1.25rem, 2.4vw, 1.85rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services__trigger:hover .services__title {
+  transform: translateX(6px);
+}
+
+/* «+» dibujado con dos líneas finas; al abrir gira y se convierte en «×». */
+.services__icon {
+  position: relative;
+  width: 0.95rem;
+  height: 0.95rem;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.services__icon::before,
+.services__icon::after {
+  content: '';
+  position: absolute;
+  background: var(--ink-dark);
+  transition: background 0.25s ease;
+}
+
+.services__icon::before {
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1.5px;
+  margin-top: -0.75px;
+}
+
+.services__icon::after {
+  left: 50%;
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  margin-left: -0.75px;
+}
+
+.services__trigger:hover .services__icon::before,
+.services__trigger:hover .services__icon::after,
+.services__item--open .services__icon::before,
+.services__item--open .services__icon::after {
+  background: var(--color-accent);
+}
+
+.services__item--open .services__icon {
+  transform: rotate(45deg);
+}
+
+/* Contenido desplegable: la altura se anima de 0 a su tamaño real. */
+.services__panel {
+  display: grid;
+  grid-template-rows: 0fr;
+  visibility: hidden;
+  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1), visibility 0s linear 0.4s;
+}
+
+.services__item--open .services__panel {
+  grid-template-rows: 1fr;
+  visibility: visible;
+  transition-delay: 0s;
+}
+
+.services__panel-inner {
+  min-height: 0;
+  overflow: hidden;
+  /* Alinea el texto con el título de la fila. */
+  padding-left: calc((100% - 3rem) / 4 + 3rem);
+}
+
+.services__panel-inner p {
+  max-width: 34rem;
+  opacity: 0.78;
+}
+
+.services__ask {
+  display: inline-block;
+  margin: 0.9rem 0 clamp(1.25rem, 2.4vw, 1.75rem);
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+}
+
+@media (max-width: 52rem) {
+  .services__head {
+    grid-template-columns: 1fr;
+  }
+
+  .services__trigger {
+    grid-template-columns: auto 1fr auto;
+    gap: 0 1rem;
+  }
+
+  .services__panel-inner {
+    padding-left: 1.95rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .services__title,
+  .services__icon,
+  .services__panel {
+    transition: none;
+  }
+}
