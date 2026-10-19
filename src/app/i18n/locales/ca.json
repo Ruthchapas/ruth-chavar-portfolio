@@ -67,7 +67,7 @@
   },
   "services": {
     "heading": "serveis",
-    "intro": "Webs i aplicacions per a museus, entitats culturals, divulgadors i projectes de patrimoni. Pressupost tancat, continguts editables sense tocar codi i acompanyament abans i després de publicar.",
+    "intro": "Webs i aplicacions a mida per a museus, entitats culturals, divulgadors i projectes de patrimoni. Pressupost tancat, continguts editables sense tocar codi i acompanyament abans i després de publicar.",
     "items": [
       {
         "title": "Web de presència",
@@ -80,6 +80,14 @@
       {
         "title": "Mapes i rutes interactives",
         "description": "Mapes amb llocs, fitxes, galeries i rutes temàtiques per donar a conèixer patrimoni, itineraris o col·leccions. Com Medievalismes, adaptat al teu projecte."
+      },
+      {
+        "title": "Audioguies a mida",
+        "description": "Audioguies per al mòbil del visitant, dissenyades segons el que necessiti cada museu: àudios i textos per sala o punt d’interès, idiomes, format, funcions i forma d’accés (per exemple, un codi QR). El que em demanis, ho desenvolupo."
+      },
+      {
+        "title": "Aplicacions a mida",
+        "description": "Aplicacions web a mida que funcionen al mòbil, la tauleta i l’ordinador: eines per al teu equip, panells de gestió o apps per als teus visitants. M’expliques què necessites i ho desenvolupo, des de la idea fins a la publicació."
       },
       {
         "title": "Manteniment",

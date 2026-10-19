@@ -67,7 +67,7 @@
   },
   "services": {
     "heading": "servicios",
-    "intro": "Webs y aplicaciones para museos, entidades culturales, divulgadores y proyectos de patrimonio. Presupuesto cerrado, contenidos editables sin tocar código y acompañamiento antes y después de publicar.",
+    "intro": "Webs y aplicaciones a medida para museos, entidades culturales, divulgadores y proyectos de patrimonio. Presupuesto cerrado, contenidos editables sin tocar código y acompañamiento antes y después de publicar.",
     "items": [
       {
         "title": "Web de presencia",
@@ -80,6 +80,14 @@
       {
         "title": "Mapas y rutas interactivas",
         "description": "Mapas con lugares, fichas, galerías y rutas temáticas para dar a conocer patrimonio, itinerarios o colecciones. Como Medievalismes, adaptado a tu proyecto."
+      },
+      {
+        "title": "Audioguías a medida",
+        "description": "Audioguías para el móvil del visitante, diseñadas según lo que necesite cada museo: audios y textos por sala o punto de interés, idiomas, formato, funciones y forma de acceso (por ejemplo, un código QR). Lo que me pidas, lo desarrollo."
+      },
+      {
+        "title": "Aplicaciones a medida",
+        "description": "Aplicaciones web a medida que funcionan en el móvil, la tableta y el ordenador: herramientas para tu equipo, paneles de gestión o apps para tus visitantes. Me cuentas qué necesitas y lo desarrollo, desde la idea hasta la publicación."
       },
       {
         "title": "Mantenimiento",

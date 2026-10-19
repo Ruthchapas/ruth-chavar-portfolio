@@ -67,7 +67,7 @@
   },
   "services": {
     "heading": "services",
-    "intro": "Websites and applications for museums, cultural organizations, history communicators and heritage projects. Fixed quotes, content you can edit without touching code, and support before and after launch.",
+    "intro": "Custom websites and applications for museums, cultural organizations, history communicators and heritage projects. Fixed quotes, content you can edit without touching code, and support before and after launch.",
     "items": [
       {
         "title": "Presence website",
@@ -80,6 +80,14 @@
       {
         "title": "Interactive maps and routes",
         "description": "Maps with places, detail pages, galleries and themed routes to present heritage, itineraries or collections. Like Medievalismes, adapted to your project."
+      },
+      {
+        "title": "Custom audio guides",
+        "description": "Audio guides for the visitor’s phone, designed around what each museum needs: audio and text for each room or point of interest, languages, format, features and how visitors reach them (a QR code, for example). Whatever you ask for, I build."
+      },
+      {
+        "title": "Custom applications",
+        "description": "Custom web applications that work on phone, tablet and desktop: tools for your team, management panels or apps for your visitors. Tell me what you need and I build it, from the idea to launch."
       },
       {
         "title": "Maintenance",
