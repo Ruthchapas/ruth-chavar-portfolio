@@ -1,11 +1,13 @@
 import { AfterViewInit, Component, ElementRef, OnDestroy, inject } from '@angular/core';
 import { Hero } from './hero/hero';
 import { Catalog } from './catalog/catalog';
+import { Services } from './services/services';
+import { Process } from './process/process';
 import { About } from './about/about';
 
 @Component({
   selector: 'app-home',
-  imports: [Hero, Catalog, About],
+  imports: [Hero, Catalog, Services, Process, About],
   templateUrl: './home.html',
   styleUrl: './styles.css'
 })

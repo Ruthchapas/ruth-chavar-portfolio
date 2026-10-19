@@ -2,6 +2,7 @@
   "documentTitle": "Ruth Chavar — web developer for culture and heritage",
   "nav": {
     "projects": "projects",
+    "services": "services",
     "about": "about"
   },
   "hero": {
@@ -63,6 +64,50 @@
         ]
       }
     }
+  },
+  "services": {
+    "heading": "services",
+    "intro": "Websites and applications for museums, cultural organizations, history communicators and heritage projects. Fixed quotes, content you can edit without touching code, and support before and after launch.",
+    "items": [
+      {
+        "title": "Presence website",
+        "description": "A clear, fast, mobile-friendly page with a contact form, published on your own domain. To present an organization, an exhibition or a project."
+      },
+      {
+        "title": "Website with content management",
+        "description": "A multi-page website with a simple panel to edit texts, images and events without touching code. Includes a training session and, if needed, several languages."
+      },
+      {
+        "title": "Interactive maps and routes",
+        "description": "Maps with places, detail pages, galleries and themed routes to present heritage, itineraries or collections. Like Medievalismes, adapted to your project."
+      },
+      {
+        "title": "Maintenance",
+        "description": "Updates, small changes and support after launch, so the site stays alive."
+      }
+    ],
+    "processHeading": "how I work",
+    "process": [
+      {
+        "title": "We talk",
+        "text": "A short call to understand what you need and who it is for."
+      },
+      {
+        "title": "Fixed quote",
+        "text": "Scope, timeline and price in writing before starting."
+      },
+      {
+        "title": "Development with regular updates",
+        "text": "I show you progress every week so we can adjust early."
+      },
+      {
+        "title": "Launch and training",
+        "text": "I publish the site and teach you how to manage it."
+      }
+    ],
+    "cta": "tell me about your project →",
+    "ctaSubject": "Web project enquiry",
+    "ask": "ask about this service →"
   },
   "about": {
     "heading": "about me",

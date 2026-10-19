@@ -1,0 +1,21 @@
+<div class="process">
+  <div class="container">
+    <div class="process__intro">
+      <h2>{{ t().services.processHeading }}</h2>
+      <ol class="process__steps">
+        @for (step of t().services.process; track $index) {
+          <li>
+            <strong>{{ step.title }}</strong>
+            <span>{{ step.text }}</span>
+          </li>
+        }
+      </ol>
+    </div>
+
+    <div class="process__contact">
+      <a class="process__cta" [href]="mailto()">
+        <span class="underline-draw">{{ t().services.cta }}</span>
+      </a>
+    </div>
+  </div>
+</div>

@@ -2,6 +2,7 @@
   "documentTitle": "Ruth Chavar — desarrolladora web para cultura y patrimonio",
   "nav": {
     "projects": "proyectos",
+    "services": "servicios",
     "about": "sobre mí"
   },
   "hero": {
@@ -63,6 +64,50 @@
         ]
       }
     }
+  },
+  "services": {
+    "heading": "servicios",
+    "intro": "Webs y aplicaciones para museos, entidades culturales, divulgadores y proyectos de patrimonio. Presupuesto cerrado, contenidos editables sin tocar código y acompañamiento antes y después de publicar.",
+    "items": [
+      {
+        "title": "Web de presencia",
+        "description": "Una página clara y rápida, adaptada a móvil, con formulario de contacto y publicada con tu propio dominio. Para dar a conocer una entidad, una exposición o un proyecto."
+      },
+      {
+        "title": "Web con gestor de contenidos",
+        "description": "Una web de varias páginas con un panel sencillo para editar textos, imágenes y agenda sin tocar código. Incluye una sesión de formación y, si hace falta, varios idiomas."
+      },
+      {
+        "title": "Mapas y rutas interactivas",
+        "description": "Mapas con lugares, fichas, galerías y rutas temáticas para dar a conocer patrimonio, itinerarios o colecciones. Como Medievalismes, adaptado a tu proyecto."
+      },
+      {
+        "title": "Mantenimiento",
+        "description": "Actualizaciones, cambios pequeños y soporte tras la publicación, para que la web siga viva."
+      }
+    ],
+    "processHeading": "cómo trabajo",
+    "process": [
+      {
+        "title": "Hablamos",
+        "text": "Una llamada breve para entender qué necesitas y a quién va dirigido."
+      },
+      {
+        "title": "Presupuesto cerrado",
+        "text": "Alcance, plazos y precio por escrito antes de empezar."
+      },
+      {
+        "title": "Desarrollo con entregas",
+        "text": "Te enseño avances cada semana para ajustar a tiempo."
+      },
+      {
+        "title": "Publicación y formación",
+        "text": "Publico la web y te enseño a gestionarla."
+      }
+    ],
+    "cta": "cuéntame tu proyecto →",
+    "ctaSubject": "Consulta sobre un proyecto web",
+    "ask": "consultar este servicio →"
   },
   "about": {
     "heading": "sobre mí",

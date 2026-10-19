@@ -17,6 +17,7 @@ export interface Translations {
   documentTitle: string;
   nav: {
     projects: string;
+    services: string;
     about: string;
   };
   hero: {
@@ -32,6 +33,18 @@ export interface Translations {
     viewProjectAria: string;
     /** Clave = código de proyecto (project.code) definido en data/projects-data.ts. */
     projects: Record<string, ProjectText>;
+  };
+  services: {
+    heading: string;
+    intro: string;
+    items: { title: string; description: string }[];
+    processHeading: string;
+    process: { title: string; text: string }[];
+    cta: string;
+    /** Enlace dentro de cada servicio desplegado. */
+    ask: string;
+    /** Asunto del correo que se abre al pulsar el botón de contacto. */
+    ctaSubject: string;
   };
   about: {
     heading: string;
