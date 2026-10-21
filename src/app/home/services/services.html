@@ -29,7 +29,12 @@
         >
           <div class="services__panel-inner">
             <p>{{ item.description }}</p>
-            <a class="services__ask underline-draw" [href]="mailtoFor(item.title)">{{ t().services.ask }}</a>
+            <div class="services__links">
+              @if (item.link; as link) {
+                <a class="services__ask underline-draw" [href]="link.url" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+              }
+              <a class="services__ask underline-draw" [href]="mailtoFor(item.title)">{{ t().services.ask }}</a>
+            </div>
           </div>
         </div>
       </li>

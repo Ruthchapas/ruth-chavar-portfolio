@@ -37,7 +37,7 @@ export interface Translations {
   services: {
     heading: string;
     intro: string;
-    items: { title: string; description: string }[];
+    items: { title: string; description: string; /** Enlace opcional dentro del servicio (p. ej. una demo). */ link?: { label: string; url: string } }[];
     processHeading: string;
     process: { title: string; text: string }[];
     cta: string;

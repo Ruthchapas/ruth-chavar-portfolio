@@ -83,7 +83,11 @@
       },
       {
         "title": "Audioguies a mida",
-        "description": "Audioguies per al mòbil del visitant, dissenyades segons el que necessiti cada museu: àudios i textos per sala o punt d’interès, idiomes, format, funcions i forma d’accés (per exemple, un codi QR). El que em demanis, ho desenvolupo."
+        "description": "Audioguies per al mòbil del visitant, dissenyades segons el que necessiti cada museu: àudios i textos per sala o punt d’interès, idiomes, format, funcions i forma d’accés (per exemple, un codi QR). El que em demanis, ho desenvolupo.",
+        "link": {
+          "label": "veure demo →",
+          "url": "https://audioguia.ruthchavar.com"
+        }
       },
       {
         "title": "Aplicacions a mida",

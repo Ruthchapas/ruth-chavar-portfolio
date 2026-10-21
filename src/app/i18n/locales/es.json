@@ -83,7 +83,11 @@
       },
       {
         "title": "Audioguías a medida",
-        "description": "Audioguías para el móvil del visitante, diseñadas según lo que necesite cada museo: audios y textos por sala o punto de interés, idiomas, formato, funciones y forma de acceso (por ejemplo, un código QR). Lo que me pidas, lo desarrollo."
+        "description": "Audioguías para el móvil del visitante, diseñadas según lo que necesite cada museo: audios y textos por sala o punto de interés, idiomas, formato, funciones y forma de acceso (por ejemplo, un código QR). Lo que me pidas, lo desarrollo.",
+        "link": {
+          "label": "ver demo →",
+          "url": "https://audioguia.ruthchavar.com"
+        }
       },
       {
         "title": "Aplicaciones a medida",
