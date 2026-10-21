@@ -83,7 +83,11 @@
       },
       {
         "title": "Custom audio guides",
-        "description": "Audio guides for the visitor’s phone, designed around what each museum needs: audio and text for each room or point of interest, languages, format, features and how visitors reach them (a QR code, for example). Whatever you ask for, I build."
+        "description": "Audio guides for the visitor’s phone, designed around what each museum needs: audio and text for each room or point of interest, languages, format, features and how visitors reach them (a QR code, for example). Whatever you ask for, I build.",
+        "link": {
+          "label": "see demo →",
+          "url": "https://audioguia.ruthchavar.com"
+        }
       },
       {
         "title": "Custom applications",
