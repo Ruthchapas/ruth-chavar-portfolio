@@ -21,6 +21,6 @@ export class Services {
   /** Cada servicio abre un correo con su nombre en el asunto. */
   mailtoFor(title: string): string {
     const subject = `${this.t().services.ctaSubject}: ${title}`;
-    return `mailto:ruthchavar@gmail.com?subject=${encodeURIComponent(subject)}`;
+    return `mailto:info@ruthchavar.com?subject=${encodeURIComponent(subject)}`;
   }
 }

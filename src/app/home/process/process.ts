@@ -12,6 +12,6 @@ export class Process {
   readonly t = this.i18n.t;
 
   readonly mailto = computed(
-    () => `mailto:ruthchavar@gmail.com?subject=${encodeURIComponent(this.t().services.ctaSubject)}`
+    () => `mailto:info@ruthchavar.com?subject=${encodeURIComponent(this.t().services.ctaSubject)}`
   );
 }
